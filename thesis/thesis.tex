@@ -17,6 +17,7 @@
 
 \usepackage{float} % Allows putting an [H] in \begin{figure} to specify the exact location of the figure
 \usepackage{wrapfig} % Allows in-line images
+\usepackage{hyperref} % use \url
 
 \linespread{1.2} % Line spacing
 
@@ -27,6 +28,14 @@
 \usepackage[nottoc]{tocbibind} %This will include the Bibliography in the Table of Contents
 
 \begin{document}
+
+\hypersetup
+{
+    pdfauthor={Roel Blaauwgeers},
+    pdfsubject={Thesis Template},
+    pdftitle={Thesis Teplate},
+    pdfkeywords={LaTeX, PDF, hyperlinks}
+}
 
 %----------------------------------------------------------------------------------------
 %	TITLE PAGE
