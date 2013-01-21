@@ -18,6 +18,7 @@
 \usepackage{float} % Allows putting an [H] in \begin{figure} to specify the exact location of the figure
 \usepackage{wrapfig} % Allows in-line images
 \usepackage{hyperref} % use \url
+\usepackage{glossaries}
 
 \linespread{1.2} % Line spacing
 
@@ -26,6 +27,11 @@
 \graphicspath{{./img/}} % Specifies the directory where pictures are stored
 
 \usepackage[nottoc]{tocbibind} %This will include the Bibliography in the Table of Contents
+
+
+\newglossaryentry{electrolyte}{name=electrolyte, description={solution able to conduct electric current}}
+\newglossaryentry{oesophagus}{name=\oe sophagus, description={canal from mouth to stomach}, plural=\oe sophagi}
+\makeglossaries
 
 \begin{document}
 
@@ -92,6 +98,8 @@ Roel \textsc{Blaauwgeers}
 Look at table \ref{tab:OS}. 
 \input{tables/OS.tex}
 
+\gls{electrolyte}, \gls{oesophagus}
+
 \subsection{Subsection2}
 Full width image:\\
 \includegraphics[width=\textwidth]{camel}
@@ -99,6 +107,11 @@ Full width image:\\
 \subsection{Subsection3}
 This is a \LaTeX~template\cite{bibitem1}.
 
+%----------------------------------------------------------------------------------------
+%	GLOSSARIES
+%----------------------------------------------------------------------------------------
+\addcontentsline{toc}{section}{Glossary}
+\printglossaries
 
 %----------------------------------------------------------------------------------------
 %	BIBLIOGRAPHY
@@ -109,8 +122,6 @@ This is a \LaTeX~template\cite{bibitem1}.
   Item One,\\
   \emph{http://somedomain.com}
 \end{thebibliography}
-
-
 
 
 %----------------------------------------------------------------------------------------
